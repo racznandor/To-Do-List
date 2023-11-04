@@ -3,7 +3,110 @@
     margin: 0;
 }
 
+input {
+    all: unset;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: blue;
+    background-size: cover;
+}
+
+.toDoList {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 0;
+}
+
+.content {
+    backdrop-filter: blur(8px);
+    padding: 50px;
+    width: 100%;
+    max-width: 300px;
+    color: white;
+    border-radius: 16px;
+    box-shadow: 7px 4px 68px 19px rgba(0,0,0,0.74);
+    -webkit-box-shadow: 7px 4px 68px 19px rgba(0,0,0,0.74);
+    -moz-box-shadow: 7px 4px 68px 19px rgba(0,0,0,0.74);
+}
+
+.inputBlock {
+    display: flex;
+    position: relative;
+}
+
+input {
+    background-color: transparent;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.50);
+    padding: 7px 5px;
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+label {
+    position: absolute;
+    top: 7px;
+    left: 5px;
+    font-size: 1.3rem;
+    display: block;
+    transition: all 0.5s ease-in-out;
+}
+
+input:focus, input:hover {
+    ~ label {
+        top: -25px;
+    }
+}
+
+.addButton {
+    background-color: rgba(255, 255, 255, 0.50);
+    color: white;
+    border: none;
+    width: 200px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.title {
+    padding: 0 0 40px;
+    text-align: center;
+}
+
 .toDoError {
     color: red;
     display: none;
+}
+
+.printToDo {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.itemToDo {
+    display: flex;
+    align-items: center;
+    padding: 16px 10px;
+    border-radius: 16px;
+    transition: all 0.5s ease-in-out;
+}
+
+.itemToDo:hover {
+    background-color: rgba(255, 255, 255, 0.50);
+}
+
+.itemDeleteButton {
+    margin: 0 0 0 auto;
+    transition: all 0.5s ease-in-out;
+}
+
+.itemDeleteButton:hover {
+    color: red;
+}
+
+.itemToDoText {
+    font-size: 1.2rem;
 }

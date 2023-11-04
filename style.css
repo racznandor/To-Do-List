@@ -10,7 +10,7 @@ input {
 body {
     height: 100vh;
     width: 100vw;
-    background-color: blue;
+    background: url('bg.jpg') center center no-repeat;
     background-size: cover;
 }
 

@@ -41,6 +41,11 @@ function newElement() {
         let parentElement = e.target.parentElement;
         parentElement.style.display = 'none';
     });
+
+    toDo.addEventListener('click', (e) => {
+        toDo.style.backgroundColor = 'rgba(255, 255, 255, 0.50)';
+        toDoText.style.textDecoration = 'line-through';
+    });
 }
 
 function clearModal() {

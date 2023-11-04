@@ -7,20 +7,14 @@
     <title>To Do List</title>
 </head>
 <body>
-    <div class="modal" id="modal">
-        <div class="modal-content">
-            <div class="inputBlock">
-                <input type="text" placeholder="" id="toDo" name="toDo">
-                <label for="toDo">To Do:</label>
-                <div class="toDoError">Enter your to do</div>
-            </div>
-            <button type="button" id="save">Save</button>
-            <button type="button" id="close">X</button>
-        </div>
-    </div>
-    <button type="button" id="createToDo">Create To Do</button>
     <div id="toDoList">
-        <h1>To Do List</h1>
+        <h1>My To Do List</h1>
+        <div class="inputBlock">
+            <label for="toDo">To Do:</label>
+            <input type="text" placeholder="" id="toDo" name="toDo">
+            <button type="button" id="add">Add</button>
+            <div class="toDoError">Enter your to do</div>
+        </div>
         <div class="print-toDo"></div>
     </div>
     <script src="main.js"></script>

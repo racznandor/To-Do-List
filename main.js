@@ -1,13 +1,14 @@
 const addButton = document.getElementById('add');
-const printToDo = document.querySelector('.print-toDo');
+const printToDo = document.querySelector('.printToDo');
 const inputToDo = document.getElementById('toDo');
 const toDoError = document.querySelector('.toDoError');
 
 addButton.addEventListener('click', (e) => {
     e.preventDefault();
     if (inputToDo.value) {
-        modal.style.display = 'none';
-        printToDo.innerHTML = '' + inputToDo.value;
+        let toDo = document.createElement('div');
+        toDo.innerHTML = '' + inputToDo.value;
+        printToDo.appendChild(toDo);
         clearModal();
     }
     else {

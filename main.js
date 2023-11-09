@@ -17,14 +17,20 @@ addButton.addEventListener('click', (e) => {
 function newElement() {
     let toDo = document.createElement('div');
     let deleteButton = document.createElement('i');
+    let updateButton = document.createElement('i');
+    let buttonsDiv = document.createElement('div');
     let toDoText = document.createElement('div');
 
     toDo.classList.add('itemToDo');
     deleteButton.classList.add('fa-solid', 'fa-xmark', 'fa-xl', 'itemDeleteButton');
     toDoText.classList.add('itemToDoText');
+    updateButton.classList.add('fa-solid', 'fa-pen', 'fa-lg', 'itemUpdateButton');
+    buttonsDiv.classList.add('buttonsDiv');
 
     toDo.appendChild(toDoText);
-    toDo.appendChild(deleteButton);
+    buttonsDiv.appendChild(updateButton);
+    buttonsDiv.appendChild(deleteButton);
+    toDo.appendChild(buttonsDiv);
 
     toDoText.innerHTML = '' + inputToDo.value;
     printToDo.appendChild(toDo);
@@ -42,9 +48,18 @@ function newElement() {
         parentElement.style.display = 'none';
     });
 
+    updateButton.addEventListener('mouseover', (e) => {
+        updateButton.classList.add('fa-beat-fade');
+    });
+
+    updateButton.addEventListener('mouseout', (e) => {
+        updateButton.classList.remove('fa-beat-fade');
+    });
+
     toDo.addEventListener('click', (e) => {
         toDo.style.backgroundColor = 'rgba(255, 255, 255, 0.50)';
         toDoText.style.textDecoration = 'line-through';
+        toDoText.style.textDecorationColor = 'black';
     });
 }
 

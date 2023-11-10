@@ -45,7 +45,8 @@ function newElement() {
     
     deleteButton.addEventListener('click', (e) => {
         let parentElement = e.target.parentElement;
-        parentElement.style.display = 'none';
+        let parentParentElement = parentElement.parentElement;
+        parentParentElement.style.display = 'none';
     });
 
     updateButton.addEventListener('mouseover', (e) => {
@@ -56,7 +57,11 @@ function newElement() {
         updateButton.classList.remove('fa-beat-fade');
     });
 
-    toDo.addEventListener('click', (e) => {
+    updateButton.addEventListener('click', (e) => {
+        console.log('update');
+    });
+
+    toDoText.addEventListener('click', (e) => {
         toDo.style.backgroundColor = 'rgba(255, 255, 255, 0.50)';
         toDoText.style.textDecoration = 'line-through';
         toDoText.style.textDecorationColor = 'black';

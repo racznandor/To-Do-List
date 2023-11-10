@@ -81,6 +81,7 @@ function newElement() {
         toDo.style.backgroundColor = 'rgba(255, 255, 255, 0.50)';
         toDoText.style.textDecoration = 'line-through';
         toDoText.style.textDecorationColor = 'black';
+        updateButton.style.display = 'none';
     });
 }
 

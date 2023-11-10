@@ -106,6 +106,7 @@ input:focus, input:hover {
 .buttonsDiv {
     display: flex;
     gap: 20px;
+    position: relative;
 }
 
 .itemDeleteButton, .itemUpdateButton {
@@ -117,10 +118,6 @@ input:focus, input:hover {
     color: red;
 }
 
-.itemUpdateButton:hover {
-    color: blue;
-}
-
 .itemToDoText {
     font-size: 1.2rem;
     width: 100%;
@@ -130,4 +127,15 @@ input:focus, input:hover {
 
 .itemToDoText, .buttonsDiv {
     padding: 16px 10px;
+}
+
+.updateDiv {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    height: 40px;
+    width: 200px;
+    background-color: white;
+    color: black;
+    display: none;
 }

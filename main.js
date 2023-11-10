@@ -20,12 +20,15 @@ function newElement() {
     let updateButton = document.createElement('i');
     let buttonsDiv = document.createElement('div');
     let toDoText = document.createElement('div');
+    let updateDiv = document.createElement('div');
+    let showUpdateDiv = false;
 
     toDo.classList.add('itemToDo');
     deleteButton.classList.add('fa-solid', 'fa-xmark', 'fa-xl', 'itemDeleteButton');
     toDoText.classList.add('itemToDoText');
     updateButton.classList.add('fa-solid', 'fa-pen', 'fa-lg', 'itemUpdateButton');
     buttonsDiv.classList.add('buttonsDiv');
+    updateDiv.classList.add('updateDiv');
 
     toDo.appendChild(toDoText);
     buttonsDiv.appendChild(updateButton);
@@ -59,6 +62,19 @@ function newElement() {
 
     updateButton.addEventListener('click', (e) => {
         console.log('update');
+        updateDiv.innerHTML = 'Update';
+        buttonsDiv.appendChild(updateDiv);
+
+        showUpdateDiv = !showUpdateDiv;
+        console.log(showUpdateDiv);
+        if (showUpdateDiv) {
+            updateDiv.style.display = 'block';
+            updateButton.style.color = 'blue';
+        }
+        else {
+            updateDiv.style.display = 'none';
+            updateButton.style.color = 'white';
+        }
     });
 
     toDoText.addEventListener('click', (e) => {
